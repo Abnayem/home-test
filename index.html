@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Parameters</title>
+  
+</head>
+<body>
+  <h1>Query Parameters</h1>
+  <div id="query-params"> </div>
+
+  <script>
+    var baseUrl = "index.html";
+    var queryParams = "?a=123&b=234&c=456";
+
+  var url = baseUrl + queryParams;
+   window.location.href = url;
+
+   var queryParams = new URLSearchParams(window.location.search);
+
+    // Create a string representation of the query parameters
+    var queryParamsString = '';
+    queryParams.forEach(function(value, key) {
+      queryParamsString += key + ': ' + value + '<br>';
+    });
+
+    // Display the query parameters on the screen
+    var queryParamsElement = document.getElementById('query-params');
+    queryParamsElement.innerHTML = queryParamsString;
+  </script>
+  
+
+
+</body>
+</html>
