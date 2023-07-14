@@ -1,0 +1,19 @@
+
+*{
+  
+  
+  margin: 0;
+  padding: 0;
+}
+.alert p {
+  margin: 0;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+ 
+}
+@keyframes marquee {
+  100% { transform: translateX(100%); }
+  0% { transform: translateX(-100%); }
+}
+
+
